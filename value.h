@@ -109,7 +109,7 @@ public:
         build_topo(node);
 
 
-      
+        for (auto& n : topo) n->grad = 0;
 
         node->grad = 1;
         for (auto it = topo.rbegin(); it != topo.rend(); ++it) {
